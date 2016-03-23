@@ -24,11 +24,12 @@ int[] promotion_choice = {
 }; //when a pawn promotion is being made, this determines the position of where the choice of pieces to promote to will appear on the screen
 int en_passant = 0; //whether the last move was a double pawn move or not, 0 if no, the position of the pawn having double moved if yes
 int freeze = -1; //whether the game is awaiting a user selection of piece to promote to during a pawn promotion
-PFont myFont = createFont("Verdana", 12); 
+PFont myFont;
 
 void setup() {
+  myFont = createFont("Verdana", 12); 
   textFont(myFont, 12);
-  size(s_size, s_size);
+  size(1000, 1000);
   for (int i = 0; i < 64; i ++) { 
     board[i] = 0;
   }
